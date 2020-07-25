@@ -1,32 +1,58 @@
 
-class  GithubUser{
+import 'dart:io';
 
-   String login;
-   int  id;
-   String avatar_url;
-   String url;
-   String followers_url;
-   String repos_url;
-   
-   
-  //https://api.github.com/users
 
-  /*"login": "mojombo",
-  "id": 1,
-  "node_id": "MDQ6VXNlcjE=",
-  "avatar_url": "https://avatars0.githubusercontent.com/u/1?v=4",
-  "gravatar_id": "",
-  "url": "https://api.github.com/users/mojombo",
-  "html_url": "https://github.com/mojombo",
-  "followers_url": "https://api.github.com/users/mojombo/followers",
-  "following_url": "https://api.github.com/users/mojombo/following{/other_user}",
-  "gists_url": "https://api.github.com/users/mojombo/gists{/gist_id}",
-  "starred_url": "https://api.github.com/users/mojombo/starred{/owner}{/repo}",
-  "subscriptions_url": "https://api.github.com/users/mojombo/subscriptions",
-  "organizations_url": "https://api.github.com/users/mojombo/orgs",
-  "repos_url": "https://api.github.com/users/mojombo/repos",
-  "events_url": "https://api.github.com/users/mojombo/events{/privacy}",
-  "received_events_url": "https://api.github.com/users/mojombo/received_events",
-  "type": "User",
-  "site_admin": false*/
+class  Customer{
+
+   String  id;
+   String first_name;
+   String last_name;
+   String gender;
+   String dob;
+   String email;
+   String phone;
+   String address;
+   String status;
+   String avatar;
+
+   Customer(this.id,this.first_name,this.last_name,this.gender,this.dob,this.email,this.phone,this.address,this.status,this.avatar);
+
+   factory Customer.fromJson(Map<String, dynamic> json) {
+
+      var avatar = json['_links']['avatar']['href'];
+
+      print(avatar);
+
+
+      return Customer(
+         json['id'],
+         json['first_name'],
+         json['last_name'],
+         json['gender'],
+         json['dob'],
+         json['email'],
+         json['phone'],
+         json['address'],
+         json['status'],
+          avatar.toString());
+
+   }
+
+   /*"id":"7671",
+   "first_name":"John",
+   "last_name":"Miller",
+   "gender":"male",
+   "dob":"1946-07-08",
+   "email":"bradly23@example.org",
+   "phone":"(796) 716-2660 x233",
+   "website":"https://www.zboncak.com/aspernatur-et-accusamus-quis-neque-iste-magni-nihil-possimus",
+   "address":"16562 Lafayette Forks\nWest Kyle, MS 14285-1380",
+   "status":"active",
+   "_links":{
+       "self":{"href":"https://gorest.co.in/public-api/users/7671"},
+       "edit":{"href":"https://gorest.co.in/public-api/users/7671"},
+      "avatar":{"href":"https://lorempixel.com/250/250/people/?38983"}
+   }
+   }*/
 }
+

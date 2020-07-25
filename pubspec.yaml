@@ -32,6 +32,7 @@ dependencies:
   local_auth: ^0.6.2+3
   get_it: ^1.0.3+2
   flutter_gifimage: ^1.0.0
+  http: any
 
 
 dev_dependencies:
@@ -50,11 +51,28 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+
+
   assets:
     - assets/icons/ic_face.png
     - assets/icons/ic_face_id.png
     - assets/gifs/finger.gif
     - assets/gifs/face.gif
+    - assets/img/mars.png
+    - assets/img/neptune.png
+    - assets/img/moon.png
+    - assets/img/earth.png
+    - assets/img/mercury.png
+    - assets/img/ic_distance.png
+    - assets/img/ic_gravity.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
