@@ -2,10 +2,15 @@
 import 'package:abc_bank_app/welcomePage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:load/load.dart';
 
 void main() {
 
-  runApp(MyApp());
+  runApp(
+    LoadingProvider(
+      child: MyApp(),
+    ),
+  );
 }
 
 

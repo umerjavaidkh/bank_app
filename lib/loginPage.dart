@@ -1,6 +1,9 @@
+import 'package:abc_bank_app/customer_listing/ListPage.dart';
+import 'package:abc_bank_app/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'Widget/SlideRightRoute.dart';
 import 'Widget/bezierContainer.dart';
 
 class LoginPage extends StatefulWidget {
@@ -59,7 +62,14 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _submitButton() {
-    return Container(
+    return
+
+      InkWell(
+        onTap: () {
+          Navigator.push(context, SlideRightRoute(page: ListPage()));
+
+    },
+     child: Container(
       width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.symmetric(vertical: 15),
       alignment: Alignment.center,
@@ -80,7 +90,8 @@ class _LoginPageState extends State<LoginPage> {
         'Login',
         style: TextStyle(fontSize: 20, color: Colors.white),
       ),
-    );
+    )
+      );
   }
 
   Widget _divider() {
@@ -167,7 +178,7 @@ class _LoginPageState extends State<LoginPage> {
   Widget _createAccountLabel() {
     return InkWell(
       onTap: () {
-       // Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
+       Navigator.push(context, MaterialPageRoute(builder: (context) => SignUpPage()));
       },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 20),

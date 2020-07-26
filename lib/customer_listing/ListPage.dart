@@ -1,11 +1,14 @@
 import 'dart:convert';
 
 import 'package:abc_bank_app/data/GithubUser.dart';
-import 'package:abc_bank_app/test_package/common/customer_summary.dart';
+
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:load/load.dart';
+
+import 'common/customer_summary.dart';
 
 class ListPage extends StatefulWidget {
 
@@ -37,23 +40,21 @@ class _ListPageState extends State<ListPage> {
     await http.get("https://api.npoint.io/82d2c20fa88817019213");
     if (response.statusCode == 200) {
 
-      Map<String, dynamic> data = jsonDecode(response.body);
-      //print(response.body);
-      for(var item in data['result']){
-        //print(item);
-        list.add(new Customer.fromJson(item));
+      if(response.body!=null) {
+        Map<String, dynamic> data = jsonDecode(response.body);
+        for (var item in data['result']) {
+          //print(item);
+          list.add(new Customer.fromJson(item));
+        }
+
+        setState(() {
+
+          hideLoadingDialog();
+        });
       }
 
-
-     /* list = (json.decode(response.body)["result"] as List)
-          .map((data) => new Customer.fromJson(data))
-          .toList();*/
-
-      setState(() {
-
-      });
-
     } else {
+      hideLoadingDialog();
       throw Exception('Failed to load photos');
     }
   }
@@ -64,6 +65,7 @@ class _ListPageState extends State<ListPage> {
   void initState() {
     super.initState();
 
+    showLoadingDialog();
     _fetchData();
   }
 

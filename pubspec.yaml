@@ -33,7 +33,8 @@ dependencies:
   get_it: ^1.0.3+2
   flutter_gifimage: ^1.0.0
   http: any
-
+  load: ^0.1.6
+  cached_network_image: ^2.2.0+1
 
 dev_dependencies:
   flutter_test:

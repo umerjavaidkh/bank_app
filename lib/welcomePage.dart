@@ -1,4 +1,4 @@
-import 'package:abc_bank_app/local_auth_custom.dart';
+import 'package:abc_bank_app/local_auth/local_auth_custom.dart';
 import 'package:abc_bank_app/signup.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,10 +7,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_gifimage/flutter_gifimage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:local_auth/local_auth.dart';
-import 'dart:io';
-import 'ListPage.dart';
 import 'Widget/EnterExitRoute.dart';
 import 'Widget/SlideRightRoute.dart';
+import 'customer_listing/ListPage.dart';
 import 'loginPage.dart';
 
 
