@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:abc_bank_app/data/GithubUser.dart';
+import 'package:abc_bank_app/data/Customer.dart';
 
 import 'dart:async';
 import 'dart:convert';

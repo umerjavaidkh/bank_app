@@ -35,6 +35,8 @@ dependencies:
   http: any
   load: ^0.1.6
   cached_network_image: ^2.2.0+1
+  charts_flutter: ^0.9.0
+  syncfusion_flutter_charts: ^18.1.59
 
 dev_dependencies:
   flutter_test:
@@ -67,13 +69,7 @@ flutter:
     - assets/icons/ic_face_id.png
     - assets/gifs/finger.gif
     - assets/gifs/face.gif
-    - assets/img/mars.png
-    - assets/img/neptune.png
-    - assets/img/moon.png
-    - assets/img/earth.png
-    - assets/img/mercury.png
-    - assets/img/ic_distance.png
-    - assets/img/ic_gravity.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

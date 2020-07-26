@@ -23,4 +23,21 @@ class Style {
     fontSize: 20.0,
     fontWeight: FontWeight.w400
   );
+
+  static final titleTextStyleBlack = baseTextStyle.copyWith(
+      color:  Colors.black,
+      fontSize: 14.0,
+      fontWeight: FontWeight.w600
+  );
+
+  static final titleTextStyleOrange = baseTextStyle.copyWith(
+      color:  Colors.deepOrange,
+      fontSize: 16.0,
+      fontWeight: FontWeight.w600
+  );
+
+  static final smallTextStyleOrange = commonTextStyle.copyWith(
+    color:  Colors.deepOrange,
+    fontSize: 9.0,
+  );
 }

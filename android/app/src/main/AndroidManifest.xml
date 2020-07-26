@@ -10,8 +10,8 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="flutter_local_auth"
-        android:icon="@mipmap/ic_launcher">
+        android:label="ABC BANK"
+        android:icon="@mipmap/launch_money">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

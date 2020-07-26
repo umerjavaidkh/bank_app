@@ -1,6 +1,6 @@
 import 'package:abc_bank_app/Widget/SlideRightRoute.dart';
 import 'package:abc_bank_app/customer_detail/DetailPage.dart';
-import 'package:abc_bank_app/data/GithubUser.dart';
+import 'package:abc_bank_app/data/Customer.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
